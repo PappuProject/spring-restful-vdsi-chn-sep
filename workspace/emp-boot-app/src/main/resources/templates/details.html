@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Welcome to Our Application</h1>
+<span th:utext="'EMP Application'"></span>
+Emp Id:<span th:utext="${emp.empId}"></span>
+Name:<span th:utext="${emp.name}"></span>
+City:<span th:utext="${emp.city}"></span>
+Salary:<span th:utext="${emp.salary}"></span>
+</body>
+</html>

@@ -1,0 +1,12 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: emp-service
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springdb?useSSL=false
+    username: root
+    password: root
+    name: myds
