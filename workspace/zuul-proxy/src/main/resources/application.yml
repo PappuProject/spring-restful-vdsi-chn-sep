@@ -1,0 +1,28 @@
+server:
+  port: 9999
+  
+spring:
+  application:
+    name: zuul-proxy
+    
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      
+zuul:
+  prefix: /proxy
+  routes:
+    my-redirect:
+      path: /redirect/**
+      location: http://www.google.com
+    direct-access:
+      path: /direct/**
+      location: http://localhost:8082
+    by-service:
+      path: /service/**
+      location: emp-service
+    by-ribbon:
+      path: /lb/**
+      location: hr-service
